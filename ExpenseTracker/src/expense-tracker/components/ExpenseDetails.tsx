@@ -1,5 +1,7 @@
 import React from "react";
 
+import ExpandableDescription from "./ExpandableDescription";
+
 interface Expense {
   id: number;
   description: string;
@@ -29,7 +31,11 @@ const ExpenseDetails = ({ expenseList, onEdit, onDelete }: Props) => {
       <tbody>
         {expenseList.map((expense) => (
           <tr key={expense.id}>
-            <td>{expense.description}</td>
+            <td>
+              <ExpandableDescription>
+                {expense.description}
+              </ExpandableDescription>
+            </td>
             <td>{expense.amount}</td>
             <td>{expense.category}</td>
             <td>

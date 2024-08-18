@@ -4,6 +4,7 @@ import ExpenseFilter from "./expense-tracker/components/ExpenseFilter";
 import EditExpenseForm from "./expense-tracker/components/EditExpenseForm";
 import { useState } from "react";
 import categories from "./expense-tracker/categories";
+import ExpandableDescription from "./expense-tracker/components/ExpandableDescription";
 
 interface Expense {
   id: number;
@@ -19,27 +20,28 @@ function App() {
   const [expenses, setExpenses] = useState([
     {
       id: 1,
-      description: "milk",
-      amount: 5,
-      category: "Groceries",
-    },
-    {
-      id: 2,
       description: "bread",
       amount: 8,
       category: "Groceries",
     },
     {
-      id: 3,
+      id: 2,
       description: "movies",
       amount: 20,
       category: "Entertainment",
     },
     {
-      id: 4,
+      id: 3,
       description: "fuel",
       amount: 15,
       category: "Utilities",
+    },
+    {
+      id: 4,
+      description:
+        "An Expandable Text component provides  features like, allowing users to toggle between viewing more or less content with a simple click of a button. Initially, a portion of the text is displayed, and the user can click View More to reveal the full content. Once expanded, the button changes to View Less, enabling the user to collapse the text back to its original state. This functionality is ideal for displaying large blocks of text in a concise and user-friendly manner, enhancing the overall user experience by reducing visual clutter.",
+      amount: 15,
+      category: "Entertainment",
     },
   ]);
 
