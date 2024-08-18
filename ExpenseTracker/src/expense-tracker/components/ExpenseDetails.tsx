@@ -9,7 +9,7 @@ interface Expense {
 
 interface Props {
   expenseList: Expense[];
-  onEdit: (id: number) => void;
+  onEdit: (Expense: Expense) => void;
   onDelete: (id: number) => void;
 }
 
@@ -34,7 +34,7 @@ const ExpenseDetails = ({ expenseList, onEdit, onDelete }: Props) => {
             <td>{expense.category}</td>
             <td>
               <button
-                onClick={() => onEdit(expense.id)}
+                onClick={(e) => onEdit(expense)}
                 className="btn btn-outline-danger"
               >
                 Edit
