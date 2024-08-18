@@ -1,10 +1,9 @@
-import Form from "./components/Form";
 import ExpenseTracker from "./expense-tracker/components/ExpenseTracker";
 import ExpenseDetails from "./expense-tracker/components/ExpenseDetails";
 import ExpenseFilter from "./expense-tracker/components/ExpenseFilter";
 import EditExpenseForm from "./expense-tracker/components/EditExpenseForm";
 import { useState } from "react";
-import categories from "./expense-tracker/category";
+import categories from "./expense-tracker/categories";
 
 interface Expense {
   id: number;
